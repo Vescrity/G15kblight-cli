@@ -1,0 +1,18 @@
+pkgname=G15kblight-cli
+pkgver=0.1
+pkgrel=1
+pkgdesc="A command-line utility to control Dell G15 keyboard backlight"
+arch=('x86_64')
+url="https://github.com/Vescrity/G15kblight-cli"
+license=('GPLv3')
+depends=('python-pyusb')
+makedepends=('git')
+source=("git+https://github.com/Vescrity/$pkgname.git")
+md5sums=('SKIP') 
+package() {
+  cd "$srcdir/$pkgname"
+  install -d "$pkgdir/opt/$pkgname"
+  install -d "$pkgdir/usr/bin"
+  cp -a src/* "$pkgdir/opt/$pkgname/"
+  install -Dm755 "$pkgname" "$pkgdir/usr/bin/$pkgname"
+}
