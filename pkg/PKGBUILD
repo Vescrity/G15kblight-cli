@@ -1,5 +1,5 @@
 pkgname=G15kblight-cli
-pkgver=0.1
+pkgver=0.1.1
 pkgrel=1
 pkgdesc="A command-line utility to control Dell G15 keyboard backlight"
 arch=('x86_64')

@@ -10,7 +10,7 @@ def hex_color_type(hex_str):
     value = int(hex_str, 16)
     return (value >> 16) & 0xFF, (value >> 8) & 0xFF, value & 0xFF
 
-parser = argparse.ArgumentParser(prog='dccli', description='Set keyborad backlight color')
+parser = argparse.ArgumentParser(prog='G15kblight-cli', description='Set keyborad backlight color')
 parser.add_argument('-s', type=hex_color_type, help='Static color')
 parser.add_argument('-m', type=hex_color_type, help='Morph color')
 parser.add_argument('-t', type=int, choices=range(0x4, 0x1000), default=255, metavar='duration', help='Morph duration')

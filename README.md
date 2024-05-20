@@ -15,6 +15,17 @@ Only static color and morph is supported at this time.
 
 ## Installation
 
+### Arch Linux
+
+[`pkg/PKGBUILD`](pkg/PKGBUILD)
+
+```bash
+cd pkg
+makepkg -si
+```
+
+### Others
+
 No installation necessary, besides installing python dependencies, and creating the udev rule ```/etc/udev/rules.d/00-aw-elc.rules```, and rebooting. Make sure the user is part of the ```plugdev``` group. Alternatively, run the script as root (not recommended).
 
 ```
@@ -28,6 +39,21 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="187c", ATTRS{idProduct}=="0550", MODE="0660"
 - python-pyusb
 
 ## Usage
+
+```
+G15kblight-cli -h
+```
+
+#### Example
+
+```
+# set static color
+G15kblight-cli -s 0x7733FF
+# set morth color
+G15kblight-cli -m 0x7733FF
+# set static and morth color and duration
+G15kblight-cli -s 0x7733FF -m 0x7733FF -t 555
+```
 
 ## License
 GNU GENERAL PUBLIC LICENSE v3
