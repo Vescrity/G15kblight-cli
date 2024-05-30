@@ -34,7 +34,7 @@ No installation necessary, besides installing python dependencies, and creating 
 SUBSYSTEM=="usb", ATTRS{idVendor}=="187c", ATTRS{idProduct}=="0550", MODE="0660", GROUP="plugdev", SYMLINK+="awelc"
 ```
 
-## Depandencies
+## Dependencies
 
 - python-pyusb
 
