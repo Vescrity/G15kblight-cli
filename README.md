@@ -26,13 +26,7 @@ makepkg -si
 
 ### Others
 
-No installation necessary, besides installing python dependencies, and creating the udev rule ```/etc/udev/rules.d/00-aw-elc.rules```, and rebooting. Make sure the user is part of the ```plugdev``` group. Alternatively, run the script as root (not recommended).
-
-```
-/etc/udev/rules.d/00-aw-elc.rules
-
-SUBSYSTEM=="usb", ATTRS{idVendor}=="187c", ATTRS{idProduct}=="0550", MODE="0660", GROUP="plugdev", SYMLINK+="awelc"
-```
+No installation necessary, besides installing python dependencies.
 
 ## Dependencies
 
